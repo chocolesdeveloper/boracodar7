@@ -1,0 +1,128 @@
+header {
+  background-color: #121214;
+  min-height: 33.25rem;
+  background-color: #f8f8ff;
+
+  position: relative;
+
+  overflow: hidden;
+
+  display: grid;
+  place-content: center;
+
+  &::before {
+    content: "";
+
+    background-image: url(/assets/img/bg-header-top.svg);
+    width: 25.4375rem;
+    height: 21.5625rem;
+
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+  }
+
+  &::after {
+    content: "";
+
+    background-image: url(/assets/img/bg-header-bottom.svg);
+    width: 25.875rem;
+    height: 20.625rem;
+
+    position: absolute;
+    z-index: 0;
+    bottom: -0.75rem;
+    right: 0;
+  }
+
+  .content {
+    width: fit-content;
+
+    position: relative;
+    z-index: 1;
+
+    .top {
+      text-align: center;
+
+      p {
+        font-weight: 500;
+        line-height: 160%;
+
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+
+        color: #e45858;
+      }
+
+      h1 {
+        font-size: 3rem;
+        line-height: 125%;
+
+        width: 100%;
+        max-width: 40.4375rem;
+        margin: 12px auto 0;
+
+        color: #121214;
+
+        span {
+          color: #6246ea;
+        }
+      }
+    }
+  }
+
+  form {
+    margin-top: 2.5rem;
+
+    display: flex;
+    padding: 2.5rem;
+    gap: 1.5rem;
+
+    background: #ffffff;
+    border: 0.0625rem solid #eaeaea;
+    border-radius: 0.625rem;
+
+    .search-field {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+
+      background: #f4f4ff;
+      border-radius: 0.3125rem;
+
+      padding: 0.75rem 0.5rem 0.75rem 0.875rem;
+
+      &.select {
+        position: relative;
+
+        select {
+          z-index: 1;
+        }
+
+        .ph-light.ph-caret-down {
+          position: absolute;
+          right: 10px;
+          z-index: 0;
+          color: #858793;
+        }
+      }
+
+      i {
+        font-size: 1.5rem;
+        color: #e45858;
+      }
+
+      input,
+      select {
+        color: #7c7c8a;
+        min-width: 17.5rem;
+        text-align: left;
+      }
+    }
+
+    button {
+      padding: 0.75rem 2rem;
+    }
+  }
+}
